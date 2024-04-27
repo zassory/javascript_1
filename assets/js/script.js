@@ -1,4 +1,4 @@
-
+import { sumar , restar , getResultado , limpiar } from "./operaciones.js";
 
 let numero1 = 0;
 let numero2 = 0;
@@ -15,10 +15,11 @@ let btnSumar = document.getElementById("btnSumar");
 let soloNumeros = /^[0-9]+$/;
 
 
-btnSumar.addEventListener("click", function(){
-    //e.preventDefault();
 
-    error1.innerHTML = "";
+
+btnSumar.addEventListener("click", function(){    
+    
+    limpiar(error1,error2);
     numero1 = document.getElementById("numero1").value;        
 
     if(numero1 === ""){
@@ -41,12 +42,12 @@ btnSumar.addEventListener("click", function(){
         return;
     }
 
-    result = parseInt(numero1) + parseInt(numero2);
-    resultado.innerHTML = result;
-    resultado.style.color = "blue";
-    resultado.style.fontSize = "2rem";        
+    result = sumar(numero1,numero2);
+    getResultado(resultado,result);
 
 });
+
+
 
 
 
