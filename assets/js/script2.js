@@ -22,6 +22,14 @@ const getRobotById = (id="000") => {
     })
 }
 
+const ejemplo = () => {
+
+    return robots.map((robot)=> {
+        console.log("El nombre es: "+ robot.nombre + " " + "y el id es: "+ robot.name);
+        console.log(`El nombr es: ${robot.nombre} y el id es: ${robot.id}`);
+    })
+}
+
 
 const generateRobotCards = (robots) =>  {
     let cardMatrix = '';

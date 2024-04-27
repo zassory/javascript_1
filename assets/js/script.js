@@ -20,7 +20,8 @@ let soloNumeros = /^[0-9]+$/;
 btnSumar.addEventListener("click", function(){    
     
     limpiar(error1,error2);
-    numero1 = document.getElementById("numero1").value;        
+
+    numero1 = document.getElementById("numero1").value;
 
     if(numero1 === ""){
         error1.innerHTML = "Debe agregar el primer numero";
